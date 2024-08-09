@@ -1,0 +1,69 @@
+body {
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: gray;
+    text-align: center;
+}
+
+p {
+    color: black;
+    text-align: center;
+}
+
+summary {
+    list-style: none; /* Supprime le style par défaut de la liste */
+    cursor: pointer;  /* Change le curseur pour indiquer que c'est cliquable */
+    display: flex;
+    align-items: center;
+}
+
+summary::before {
+    content: "▶"; /* Ajoute une flèche comme indicateur */
+    display: inline-block;
+    font-size: 1.2em;
+    margin-right: 5px;
+    transform: rotate(0deg); /* Positionne la flèche fermée */
+    transition: transform 0.2s; /* Animation de rotation */
+}
+
+details[open] summary::before {
+    transform: rotate(90deg); /* Tourne la flèche lorsqu'elle est ouverte */
+}
+
+summary span {
+    display: none; /* Cache le texte mais conserve la flèche */
+}
+
+nav {
+    background-color: rgb(17, 164, 223); /* Fond noir pour la barre de navigation */
+    color: rgb(243, 96, 218); /* Texte blanc */
+    padding: 10px 0; /* Padding pour espacer le contenu du nav */
+}
+
+.menu {
+    list-style-type: none; /* Enlève les puces */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utiliser Flexbox pour aligner horizontalement */
+    justify-content: center; /* Centrer les éléments horizontalement */
+}
+
+.menu li {
+    margin: 0 15px; /* Espacement horizontal entre les éléments du menu */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Couleur du texte des liens */
+    padding: 10px 20px; /* Espacement intérieur des liens */
+    display: block; /* Assure que le lien occupe l'espace de son conteneur */
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: rgb(248, 80, 220); /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
