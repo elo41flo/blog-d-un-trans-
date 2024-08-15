@@ -13,30 +13,6 @@ p {
     text-align: center;
 }
 
-summary {
-    list-style: none; /* Supprime le style par défaut de la liste */
-    cursor: pointer;  /* Change le curseur pour indiquer que c'est cliquable */
-    display: flex;
-    align-items: center;
-}
-
-summary::before {
-    content: "▶"; /* Ajoute une flèche comme indicateur */
-    display: inline-block;
-    font-size: 1.2em;
-    margin-right: 5px;
-    transform: rotate(0deg); /* Positionne la flèche fermée */
-    transition: transform 0.2s; /* Animation de rotation */
-}
-
-details[open] summary::before {
-    transform: rotate(90deg); /* Tourne la flèche lorsqu'elle est ouverte */
-}
-
-summary span {
-    display: none; /* Cache le texte mais conserve la flèche */
-}
-
 nav {
     background-color: rgb(17, 164, 223); /* Fond noir pour la barre de navigation */
     color: rgb(243, 96, 218); /* Texte blanc */
@@ -67,3 +43,8 @@ nav {
 .menu li a:hover {
     background-color: rgb(248, 80, 220); /* Couleur de fond au survol */
     color: white; /* Couleur du texte au survol */
+}
+
+.centered-link {
+    text-align: center;
+}
