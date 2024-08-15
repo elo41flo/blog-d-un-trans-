@@ -48,3 +48,10 @@ nav {
 .centered-link {
     text-align: center;
 }
+
+@media (max-width: 600px) {
+    img {
+        width: 100%; /* Image prend toute la largeur de l'écran */
+        height: auto; /* La hauteur s'ajuste automatiquement */
+    }
+}
